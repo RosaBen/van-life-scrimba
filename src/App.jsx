@@ -4,19 +4,14 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
+
+// components
+import Header from "./components/Header";
+
 function App() {
   return (
     <BrowserRouter>
-      <header>
-        <Link to="/" target="_blank" rel="noopener noreferrer">
-          #VanLife
-        </Link>
-        <nav>
-          <Link to="/about" target="_blank" rel="noopener noreferrer">
-            About
-          </Link>
-        </nav>
-      </header>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
