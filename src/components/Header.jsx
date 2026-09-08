@@ -10,6 +10,9 @@ export default function Header() {
         <Link to="/about" target="_blank" rel="noopener noreferrer">
           About
         </Link>
+        <Link to="/vans" target="_blank" rel="noopener noreferrer">
+          Vans
+        </Link>
       </nav>
     </header>
   );

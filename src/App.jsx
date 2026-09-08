@@ -1,9 +1,10 @@
 // Packages
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Vans from "./pages/Vans";
 
 // components
 import Header from "./components/Header";
@@ -14,6 +15,9 @@ import "./assets/styles/header-footer.css";
 import "./assets/styles/home.css";
 import "./assets/styles/about.css";
 
+// scripts
+import "./assets/scripts/server";
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/vans" element={<Vans />} />
           </Routes>
         </main>
         <Footer />
