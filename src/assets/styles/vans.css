@@ -1,0 +1,103 @@
+.vans-page {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.vans-page h1 {
+  text-align: center;
+}
+.vans-page .filter-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vans-page .filter-btns .btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vans-page .filter-btns .btns .btn {
+  background: #ffead0;
+  border: none;
+  width: 85px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.vans-page .filter-btns .clear-btn {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.list-vans {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  width: 320px;
+}
+
+.list-vans .card {
+  margin-bottom: 3rem;
+}
+
+.list-vans .card img {
+  width: 230px;
+  height: 230px;
+  border-radius: 0.5rem;
+}
+
+.list-vans .card .card-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-vans .card .card-infos p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.list-vans .card .card-infos p span {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.list-vans .card .btn {
+  border: none;
+  width: 85px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.simple {
+  background: #e17654;
+  color: #ffead0;
+}
+
+.rugged {
+  background: #115e59;
+  color: #ffead0;
+}
+
+.luxury {
+  background: #161616;
+  color: #ffead0;
+}

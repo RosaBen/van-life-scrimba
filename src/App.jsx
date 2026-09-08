@@ -14,9 +14,7 @@ import Footer from "./components/Footer";
 import "./assets/styles/header-footer.css";
 import "./assets/styles/home.css";
 import "./assets/styles/about.css";
-
-// scripts
-import "./assets/scripts/server";
+import "./assets/styles/vans.css";
 
 function App() {
   return (
