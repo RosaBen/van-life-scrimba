@@ -102,3 +102,57 @@
   background: #161616;
   color: #ffead0;
 }
+
+.van-detail-container {
+  padding: 1rem;
+}
+
+.van-detail-container > a {
+  color: #161616;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+}
+
+.van-detail img {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  width: 344px;
+  height: 344px;
+}
+
+.van-detail i {
+  width: 85px;
+  height: 34px;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: #ffead0;
+}
+
+.van-detail h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.van-detail .van-price span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.van-detail .van-description {
+  margin-top: 1rem;
+  color: #161616;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.van-detail .link-button {
+  background: #ff8c38;
+  color: #ffffff;
+  width: 344px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
