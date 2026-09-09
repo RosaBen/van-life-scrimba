@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "../assets/scripts/server";
-import { data } from "react-router-dom";
 import capitalizeFirstChar from "../assets/scripts/utils";
 
 export default function Vans() {

@@ -56,6 +56,7 @@
   width: 230px;
   height: 230px;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .list-vans .card .card-infos {
