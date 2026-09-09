@@ -14,7 +14,13 @@ export default function Vans() {
   const listVans = vans.map((item) => {
     return (
       <div className="card" key={item.id}>
-        <Link to={`/vans/${item.id}`} target="_blank" rel="noopener noreferrer">
+        <Link
+          to={`/vans/${item.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View details for ${item.name}, 
+                             priced at $${item.price} per day`}
+        >
           <img src={item.imageUrl} alt={item.name} />
           <div className="card-infos">
             <p>{item.name}</p>
@@ -23,10 +29,8 @@ export default function Vans() {
               <span>/day</span>{" "}
             </p>
           </div>
-          <button className="simple btn">
-            {capitalizeFirstChar(item.type)}
-          </button>
         </Link>
+        <button className="simple btn">{capitalizeFirstChar(item.type)}</button>
       </div>
     );
   });
