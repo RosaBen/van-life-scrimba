@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
+import VanDetail from "./pages/VanDetail";
 
 // components
 import Header from "./components/Header";
@@ -14,9 +15,7 @@ import Footer from "./components/Footer";
 import "./assets/styles/header-footer.css";
 import "./assets/styles/home.css";
 import "./assets/styles/about.css";
-
-// scripts
-import "./assets/scripts/server";
+import "./assets/styles/vans.css";
 
 function App() {
   return (
@@ -28,6 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />} />
+            <Route path="/vans/:id" element={<VanDetail />} />
           </Routes>
         </main>
         <Footer />

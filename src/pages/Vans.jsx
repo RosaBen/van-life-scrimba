@@ -1,3 +1,51 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../assets/scripts/server";
+import capitalizeFirstChar from "../assets/scripts/utils";
+
 export default function Vans() {
-  return <h1>Vans page goes here 🚐</h1>;
+  const [vans, setVans] = useState([]);
+  useEffect(() => {
+    fetch("/api/vans")
+      .then((res) => res.json())
+      .then((data) => setVans(data.vans));
+  }, []);
+
+  const listVans = vans.map((item) => {
+    return (
+      <div className="card" key={item.id}>
+        <Link
+          to={`/vans/${item.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View details for ${item.name}, 
+                             priced at $${item.price} per day`}
+        >
+          <img src={item.imageUrl} alt={item.name} />
+          <div className="card-infos">
+            <p>{item.name}</p>
+            <p>
+              {`$${item.price}`}
+              <span>/day</span>{" "}
+            </p>
+          </div>
+        </Link>
+        <button className="simple btn">{capitalizeFirstChar(item.type)}</button>
+      </div>
+    );
+  });
+  return (
+    <section className="vans-page">
+      <h1>Explore our van options</h1>
+      <div className="filter-btns">
+        <div className="btns">
+          <button className="btn">Simple</button>
+          <button className="btn">Luxury</button>
+          <button className="btn">Rugged</button>
+        </div>
+        <button className="clear-btn">Clear filters</button>
+      </div>
+      <div className="list-vans">{listVans}</div>
+    </section>
+  );
 }
