@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header>
+    <header className="header-layout">
       <Link to="/" target="_blank" rel="noopener noreferrer">
         #VanLife
       </Link>
