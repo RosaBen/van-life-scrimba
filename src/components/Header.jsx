@@ -7,6 +7,9 @@ export default function Header() {
         #VanLife
       </Link>
       <nav>
+        <Link to="/host" target="_blank" rel="noopener noreferrer">
+          Host
+        </Link>
         <Link to="/about" target="_blank" rel="noopener noreferrer">
           About
         </Link>
