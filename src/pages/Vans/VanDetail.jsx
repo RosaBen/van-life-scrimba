@@ -13,7 +13,7 @@ export default function VanDetail() {
   }, [params.id]);
 
   return (
-    <div className="van-detail-container">
+    <main className="van-detail-container">
       <Link to="/vans" target="_blank" rel="noopener noreferrer">
         <FaLongArrowAltLeft /> <span>Back to all vans</span>
       </Link>
@@ -31,6 +31,6 @@ export default function VanDetail() {
       ) : (
         <h2>Loading...</h2>
       )}
-    </div>
+    </main>
   );
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../assets/scripts/server";
-import capitalizeFirstChar from "../assets/scripts/utils";
+import "../../assets/scripts/server";
+import capitalizeFirstChar from "../../assets/scripts/utils";
 
 export default function Vans() {
   const [vans, setVans] = useState([]);
@@ -35,7 +35,7 @@ export default function Vans() {
     );
   });
   return (
-    <section className="vans-page">
+    <main className="vans-page">
       <h1>Explore our van options</h1>
       <div className="filter-btns">
         <div className="btns">
@@ -46,6 +46,6 @@ export default function Vans() {
         <button className="clear-btn">Clear filters</button>
       </div>
       <div className="list-vans">{listVans}</div>
-    </section>
+    </main>
   );
 }
