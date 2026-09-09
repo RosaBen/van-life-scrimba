@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
-import Vans from "./pages/VanDetail";
+import VanDetail from "./pages/VanDetail";
 
 // components
 import Header from "./components/Header";
@@ -16,7 +16,6 @@ import "./assets/styles/header-footer.css";
 import "./assets/styles/home.css";
 import "./assets/styles/about.css";
 import "./assets/styles/vans.css";
-import VanDetail from "./pages/VanDetail";
 
 function App() {
   return (

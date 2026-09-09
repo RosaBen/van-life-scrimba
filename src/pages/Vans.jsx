@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../assets/scripts/server";
 import capitalizeFirstChar from "../assets/scripts/utils";
 
@@ -10,18 +11,22 @@ export default function Vans() {
       .then((data) => setVans(data.vans));
   }, []);
 
-  const listVans = vans.map((item, index) => {
+  const listVans = vans.map((item) => {
     return (
-      <div className="card" key={index}>
-        <img src={item.imageUrl} alt={item.name} />
-        <div className="card-infos">
-          <p>{item.name}</p>
-          <p>
-            {`$${item.price}`}
-            <span>/day</span>{" "}
-          </p>
-        </div>
-        <button className="simple btn">{capitalizeFirstChar(item.type)}</button>
+      <div className="card" key={item.id}>
+        <Link to={`/vans/${item.id}`} target="_blank" rel="noopener noreferrer">
+          <img src={item.imageUrl} alt={item.name} />
+          <div className="card-infos">
+            <p>{item.name}</p>
+            <p>
+              {`$${item.price}`}
+              <span>/day</span>{" "}
+            </p>
+          </div>
+          <button className="simple btn">
+            {capitalizeFirstChar(item.type)}
+          </button>
+        </Link>
       </div>
     );
   });
